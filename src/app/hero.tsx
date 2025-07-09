@@ -1,104 +1,97 @@
 import Image from "next/image";
 import { Instrument_Serif } from "next/font/google";
 import { Itim } from "next/font/google";
+
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-instrumentSerif",
 });
+
 const itim = Itim({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-itim",
 });
+
 export default function Hero() {
   return (
-    <div draggable="false">
+    <div draggable="false" className="relative overflow-hidden px-4 pb-32">
+      {/* Heading */}
       <div
-        className={`${instrumentSerif.className} flex text-8xl font-extrabold gap-6 mt-8 p-4 items-center justify-center  selection:bg-white selection:text-black `}
+        className={`${instrumentSerif.className} flex flex-wrap text-4xl md:text-6xl lg:text-8xl font-extrabold gap-4 mt-8 items-center justify-center selection:bg-white selection:text-black`}
       >
-        <p className=""> CREATIVE</p>
-        <p className="">WEB</p>
-        <p className="">ARCHITECT</p>
+        <p>CREATIVE</p>
+        <p>WEB</p>
+        <p>ARCHITECT</p>
       </div>
+
+      {/* Intro Text Blocks */}
       <div
-        className={`${itim.className} flex justify-between items-center w-6xl mt-5 ml-10  selection:bg-white selection:text-black`}
+        className={`${itim.className} flex flex-col lg:flex-row justify-between items-center max-w-7xl mx-auto mt-5 gap-4 selection:bg-white selection:text-black`}
       >
-        <p className="bg-[#1F1A1A] p-4 rounded-3xl">
-          I DESIGN and DEVELOP modern, interactive <br /> and visually stunning
-          websites that help
+        <p className="bg-[#1F1A1A] p-4 rounded-3xl text-center md:text-left text-sm sm:text-base">
+          I DESIGN and DEVELOP modern, interactive <br />
+          and visually stunning websites that help
           <br /> brands stand out.
         </p>
-        <p className="bg-[#1F1A1A] p-4 rounded-3xl">
-          I’m passionate DESIGNER & DEV, might <br /> not have much experience
-          but much more <br />
-          SKILLS and HUNGER.{" "}
+        <p className="bg-[#1F1A1A] p-4 rounded-3xl text-center md:text-left text-sm sm:text-base">
+          I’m passionate DESIGNER & DEV, might <br />
+          not have much experience but much more <br />
+          SKILLS and HUNGER.
         </p>
       </div>
-      <div className={`${itim.className} `}>
+
+      {/* Image + Positioned Elements */}
+      <div className={`${itim.className} relative w-full`}>
         <Image
           src="/HeroBg.png"
           alt="hero"
-          width={900}
-          height={600}
-          className=" ml-40 mt-20 pointer-events-none select-none"
+          width={1200}
+          height={800}
+          className="mx-auto mt-20 pointer-events-none select-none max-w-full h-auto"
           draggable="false"
         />
 
-        <div className="group absolute top-90 left-50">
-          <div
-            className="bg-[#68EEC8] rounded-full h-[130px] w-[130px] 
-            transform transition-transform duration-700 ease-out
-            group-hover:scale-100 group-hover:rounded-xl group-hover:rotate-0 
-            backdrop-blur-sm group-hover:backdrop-blur-lg
-            cursor-pointer flex items-center justify-center relative text-black rotate-6  selection:bg-white selection:text-black"
-          >
-            DESIGNING
-            <br />
-            WEBSITES &
-            <br /> BRANDS
+        {/* Green Bubble */}
+        <div className="absolute top-[5%] left-[5%] sm:top-[5%] sm:left-[5%] xs:top-[12%] xs:left-1/2 xs:-translate-x-1/2">
+          <div className="group bg-[#68EEC8] rounded-full h-[100px] w-[100px] sm:h-[70px] sm:w-[70px] xs:w-[50px] xs:h-[50px] transform transition-transform duration-700 ease-out group-hover:scale-100 group-hover:rounded-xl group-hover:rotate-0 backdrop-blur-sm group-hover:backdrop-blur-lg cursor-pointer flex items-center justify-center text-xs sm:text-sm md:text-base text-black rotate-6 text-center selection:bg-white selection:text-black">
+            DESIGNING <br /> WEBSITES & <br /> BRANDS
           </div>
         </div>
 
-        <div className="group absolute top-120 left-170">
-          <div
-            className="bg-[#FFA200] rounded-2xl w-[150px] h-[90px] 
-            transform transition-transform duration-700 ease-out
-            group-hover:scale-125 group-hover:rounded-full group-hover:h-[150px]
-            backdrop-blur-sm group-hover:backdrop-blur-lg
-            cursor-pointer flex items-center justify-center relative  selection:bg-white selection:text-black"
-          >
+        {/* Orange Box */}
+        <div className="absolute top-[10%] right-[10%] sm:top-[10%] sm:right-[10%] xs:top-[45%] xs:left-1/2 xs:-translate-x-1/2">
+          <div className="group bg-[#FFA200] rounded-2xl w-[130px] sm:w-[150px] h-[80px] sm:h-[90px] transform transition-transform duration-700 ease-out group-hover:scale-125 group-hover:rounded-full group-hover:h-[150px] backdrop-blur-sm group-hover:backdrop-blur-lg cursor-pointer flex items-center justify-center text-xs sm:text-sm md:text-base text-center selection:bg-white selection:text-black">
             MOTION & <br />
-            INTERACTIVE
-            <br /> DESIGNING
-            <p className="text-black text-center opacity-0 translate-y-2 transition-all duration-500 delay-200 ease-out group-hover:opacity-100 group-hover:translate-y-0">
-              {/* Add your text here */}
-            </p>
-          </div>
-        </div>
-        <div className="absolute group top-160 left-195">
-          <div className="bg-[#d0d620] h-[40px] ml-3 group-hover:w-[150px] rounded-xl w-[240px] transition-all duration-500  ease-out text-black  selection:bg-white selection:text-black">
-            <p className="p-2 flex gap-1">
-              <p className="group-hover:bottom-10 group-hover:absolute">
-                ANIMATIONS{" "}
-              </p>{" "}
-              OUT OF THE BOX
-            </p>
+            INTERACTIVE <br /> DESIGNING
           </div>
         </div>
 
-        <div className="absolute w-48 h-48 flex items-center justify-center top-160 left-60 selection:bg-white selection:text-black">
-          {/* Circular Text Moving Around */}
+        {/* Yellow Box */}
+        <div className="absolute bottom-[15%] right-[10%] sm:bottom-[10%] sm:right-[10%] xs:bottom-[25%] xs:left-1/2 xs:-translate-x-1/2">
+          <div className="group bg-[#d0d620] w-[200px] sm:w-[240px] h-[40px] rounded-xl text-black transition-all duration-500 ease-out selection:bg-white selection:text-black flex items-center justify-center text-xs sm:text-sm">
+            <span className="relative group-hover:bottom-2 group-hover:absolute">
+              ANIMATIONS
+            </span>
+            &nbsp;OUT OF THE BOX
+          </div>
+        </div>
+
+        {/* Experience Box (Blue) */}
+        <div className="absolute bottom-[10%] left-[5%] sm:bottom-[10%] sm:left-[5%] xs:bottom-[12%] xs:left-1/2 xs:-translate-x-1/2">
+          <div className="bg-[#8FA2F3] rounded-lg w-[180px] sm:w-[200px] h-[60px] flex items-center justify-center text-xs sm:text-sm selection:bg-white selection:text-black text-center p-2">
+            EXPERIENCE ? <br /> WILL GAIN TOGETHER
+          </div>
+        </div>
+
+        {/* Rotating Circular Text + Pink Center Circle */}
+        <div className="absolute top-[50%] left-[15%] sm:left-[25%] xs:left-1/2 xs:-translate-x-1/2 xs:top-[80%] sm:top-[50%] transform -translate-y-1/2 w-40 h-40 sm:w-48 sm:h-48 flex items-center justify-center selection:bg-white selection:text-black">
           <svg viewBox="0 0 200 200" className="absolute w-full h-full z-10">
             <defs>
               <path
                 id="circlePath"
-                d="
-          M 100, 100
-          m -75, 0
-          a 75,75 0 1,1 150,0
-          a 75,75 0 1,1 -150,0
-        "
+                d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
               />
             </defs>
             <text
@@ -118,23 +111,11 @@ export default function Hero() {
               </textPath>
             </text>
           </svg>
-
-          {/* Center Circle */}
-          <div className="bg-pink-300 rounded-full w-[130px] h-[130px] flex items-center justify-center text-center  selection:bg-white selection:text-black">
-            <p className="text-black font-bold text-m">
-              ALL IN
-              <br />
-              ONE
-              <br />
-              PLACE
-            </p>
+          <div className="bg-pink-300 rounded-full w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] flex items-center justify-center text-center text-black font-bold text-xs sm:text-sm">
+            ALL IN <br />
+            ONE <br />
+            PLACE
           </div>
-        </div>
-
-        <div className="bg-[#8FA2F3] rounded-lg absolute top-140 left-20 w-[200px] h-[60px]  selection:bg-white selection:text-black">
-          <p className=" p-2">
-            EXPERIENCE ?<br /> WILL GAIN TOGETHER
-          </p>
         </div>
       </div>
     </div>

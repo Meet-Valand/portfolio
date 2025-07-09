@@ -1,11 +1,12 @@
 import Nav from "./nav";
 import Hero from "./hero";
+import Projects from "./projects";
 import About from "./about";
 import Contact from "./contact";
-import Projects from "./projects";
+
 export default function App() {
   return (
-    <main>
+    <main className="bg-black text-white min-h-screen">
       <Nav />
       <Hero />
       <Projects />
