@@ -55,7 +55,7 @@ export default function Hero() {
 
         {/* Green Bubble */}
         <div className="absolute top-[5%] left-[5%] sm:top-[5%] sm:left-[5%] xs:top-[12%] xs:left-1/2 xs:-translate-x-1/2">
-          <div className="group bg-[#68EEC8] rounded-full h-[100px] w-[100px] sm:h-[70px] sm:w-[70px] xs:w-[50px] xs:h-[50px] transform transition-transform duration-700 ease-out group-hover:scale-100 group-hover:rounded-xl group-hover:rotate-0 backdrop-blur-sm group-hover:backdrop-blur-lg cursor-pointer flex items-center justify-center text-xs sm:text-sm md:text-base text-black rotate-6 text-center selection:bg-white selection:text-black">
+          <div className="group bg-[#68EEC8] rounded-full h-[100px] w-[100px] sm:h-[70px] sm:w-[140px]  transform transition-transform duration-700 ease-out group-hover:scale-100 group-hover:rounded-xl group-hover:rotate-0 backdrop-blur-sm group-hover:backdrop-blur-lg cursor-pointer flex items-center justify-center text-xs sm:text-sm md:text-base text-black rotate-6 text-center selection:bg-white selection:text-black">
             DESIGNING <br /> WEBSITES & <br /> BRANDS
           </div>
         </div>
@@ -69,9 +69,9 @@ export default function Hero() {
         </div>
 
         {/* Yellow Box */}
-        <div className="absolute bottom-[15%] right-[10%] sm:bottom-[10%] sm:right-[10%] xs:bottom-[25%] xs:left-1/2 xs:-translate-x-1/2">
+        <div className=" cursor-pointer absolute bottom-[15%] right-[10%] sm:bottom-[10%] sm:right-[10%] xs:bottom-[25%] xs:left-1/2 xs:-translate-x-1/2">
           <div className="group bg-[#d0d620] w-[200px] sm:w-[240px] h-[40px] rounded-xl text-black transition-all duration-500 ease-out selection:bg-white selection:text-black flex items-center justify-center text-xs sm:text-sm">
-            <span className="relative group-hover:bottom-2 group-hover:absolute">
+            <span className="relative group-hover:bottom-10 group-hover:absolute">
               ANIMATIONS
             </span>
             &nbsp;OUT OF THE BOX
